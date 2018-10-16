@@ -1,6 +1,6 @@
 language: ruby
 cache: bundler
-os: osx
+os: osx10
 
 rvm:
 - 2.4.4
@@ -11,6 +11,7 @@ before_install:
   - brew upgrade node
   - npm install -g appium
   - npm install wd
+  - gem install bundler
   - bundle install
 
 script:
