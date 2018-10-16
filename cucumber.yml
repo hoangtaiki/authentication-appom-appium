@@ -1,0 +1,19 @@
+<% def format_job(job)
+  %{--format junit --out ./reports/
+  --format json --out ./reports/report_#{job}_#{ENV['TEST_ENV_NUMBER'] || 1}.json
+  --format html --out ./reports/report_#{job}.html
+  --format rerun --out #{job}_failed_scenarios.txt
+  }
+  end %>
+
+default: <%= format_job("default") %>  --format pretty
+
+jenkins_android: <%= format_job("android") %> PLATFORM=ANDROID
+
+jenkins_ios: <%= format_job("ios") %> PLATPFORM=IOS
+
+jenkins_rerun: >
+  --format junit --out ./reports/
+  --format json --out ./reports/report_rerun.json
+  --format html --out ./reports/report_rerun.html
+  --format rerun --out rerun_failed_scenarios.txt

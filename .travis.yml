@@ -1,0 +1,19 @@
+language: ruby
+cache: bundler
+os: osx
+
+rvm:
+- 2.5.1
+
+before_install:
+  - mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
+  - brew -v
+  - brew upgrade node
+  - npm install -g appium
+  - npm install wd
+  - bundle install
+
+script:
+  - appium &
+  - sleep 8
+  - cucumber
