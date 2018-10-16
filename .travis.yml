@@ -6,8 +6,7 @@ rvm:
 - 2.4.4
 
 before_install:
-  - mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
-  - brew -v
+  - brew update
   - brew upgrade node
   - npm install -g appium
   - npm install wd
