@@ -1,17 +1,16 @@
 language: ruby
 cache: bundler
-os: osx10
+os: osx
 
 rvm:
 - 2.4.4
 
 before_install:
-  - mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
+  - /usr/bin/curl -sfL http://github.com/mxcl/homebrew/tarball/master | /usr/bin/tar xz -m --strip 1
   - brew -v
   - brew upgrade node
   - npm install -g appium
   - npm install wd
-  - gem install bundler
   - bundle install
 
 script:
