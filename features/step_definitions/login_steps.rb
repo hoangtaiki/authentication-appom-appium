@@ -13,7 +13,7 @@ end
 
 Then('Alert will show error {string}') do |expected|
   sleep 2
-  expect(@login_screen.alert_view.value).to eq expected.to_s
+  expect(@login_screen.alert_view.text).to eq expected.to_s
 end
 
 Then('I see welcome label appear with title {string}') do |expected|
