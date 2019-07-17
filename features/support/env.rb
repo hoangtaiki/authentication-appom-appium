@@ -10,6 +10,7 @@ ios_caps = {
   platformName: 'iOS',
   platformVersion: '12.2',
   deviceName: 'iPhone X',
+  appiumVersion: '1.14.0',
   app: File.expand_path('../app/Authentication.app', __dir__),
   newCommandTimeout: 3000,
   safariIgnoreFraudWarning: true,
