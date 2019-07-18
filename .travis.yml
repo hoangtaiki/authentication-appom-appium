@@ -1,6 +1,6 @@
 language: ruby
 cache: bundler
-os: osx
+osx_image: xcode10.2
 
 rvm:
 - 2.4.4
