@@ -8,6 +8,8 @@ rvm:
 before_install:
   - /usr/bin/curl -sfL http://github.com/mxcl/homebrew/tarball/master | /usr/bin/tar xz -m --strip 1
   - brew -v
+  - brew update
+  - brew doctor
   - brew upgrade node
   - npm install -g appium
   - npm install wd
