@@ -1,15 +1,13 @@
 language: ruby
-cache: bundler
+os: osx
 osx_image: xcode10.2
 
 rvm:
 - 2.4.4
 
 before_install:
-  - /usr/bin/curl -sfL http://github.com/mxcl/homebrew/tarball/master | /usr/bin/tar xz -m --strip 1
-  - brew -v
+  - /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   - brew update
-  - brew doctor
   - brew upgrade node
   - npm install -g appium
   - npm install wd
