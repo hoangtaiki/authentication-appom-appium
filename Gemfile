@@ -6,10 +6,10 @@ gem 'appium_lib'
 
 # gems for Automation Testing
 gem 'appom'
-gem 'cucumber', '>= 3.1.2'
+gem 'cucumber'
 gem 'os'
 gem 'parallel_tests'
-gem 'rack', '~>2.0.6'
+gem 'rack'
 gem 'robocop'
 gem 'rspec'
 gem 'selenium-webdriver'

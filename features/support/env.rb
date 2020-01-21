@@ -8,9 +8,9 @@ appium_lib_options = {
 ios_caps = {
   automationName: 'XCUITest',
   platformName: 'iOS',
-  platformVersion: '12.2',
+  platformVersion: '13.3',
   deviceName: 'iPhone X',
-  appiumVersion: '1.14.0',
+  appiumVersion: '1.15.1',
   app: File.expand_path('../app/Authentication.app', __dir__),
   newCommandTimeout: 3000,
   safariIgnoreFraudWarning: true,
